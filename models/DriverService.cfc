@@ -23,7 +23,7 @@ component {
                 );
                 // catch non expected status codes
                 if ( cfhttp.status_code != 200 ) {
-                    throw( "Oops! search.maven.org responsed with an unexpected satus code: #cfhttp.status_code#", "UnexpectedStatus" );
+                    throw( "Oops! search.maven.org responded with an unexpected status code: #cfhttp.status_code#", "UnexpectedStatus" );
                 }
                 var res = deserializeJSON( cfhttp.filecontent ).response;
                 if ( res.numFound <= 0 ) {
